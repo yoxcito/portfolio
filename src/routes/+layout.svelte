@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/memoji.png" />
+	<link rel="icon" href="/portfolio/memoji.png" />
 </svelte:head>
 
 <Nav />

@@ -10,7 +10,7 @@
 <section class="mx-auto flex min-h-[calc(100vh-5rem)] max-w-2xl flex-col justify-center px-6">
 	<div class="animate-fade-up">
 		<img
-			src="/memoji.png"
+			src="/portfolio/memoji.png"
 			alt="Memoji avatar"
 			class="mb-8 h-20 w-20 rounded-full border border-border"
 		/>
