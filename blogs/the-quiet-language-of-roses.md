@@ -2,7 +2,7 @@
 title: The Quiet Language of Roses
 description: An exploration of roses — their history, symbolism, and the quiet poetry they carry across cultures and centuries.
 date: '2024-09-20'
-cover: /portfolio/rose-cover.png
+cover: /rose-cover.png
 tags:
   - nature
   - essay

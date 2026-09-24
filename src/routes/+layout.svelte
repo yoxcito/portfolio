@@ -1,17 +1,14 @@
-<script module lang="ts">
-	export const prerender = true;
-</script>
-
 <script lang="ts">
 
 	import './layout.css';
+	import { asset } from '$app/paths';
 	import Nav from '$lib/components/Nav.svelte';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/portfolio/memoji.png" />
+	<link rel="icon" href={asset('/memoji.png')} />
 </svelte:head>
 
 <Nav />

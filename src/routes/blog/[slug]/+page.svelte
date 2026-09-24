@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 	import { formatDate } from '$lib/blog';
 	import { onMount } from 'svelte';
 
@@ -44,7 +44,7 @@
 	<title>{data.title} — Mukund</title>
 	<meta name="description" content={data.description} />
 	{#if data.cover}
-		<meta property="og:image" content={data.cover} />
+		<meta property="og:image" content={asset(data.cover)} />
 	{/if}
 </svelte:head>
 
@@ -145,7 +145,7 @@
 			{#if data.cover}
 				<div class="mb-10 overflow-hidden rounded animate-fade-up-delay-1">
 					<img
-						src={data.cover}
+						src={asset(data.cover)}
 						alt={data.title}
 						class="w-full object-cover max-h-[400px]"
 					/>
