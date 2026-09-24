@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { theme } from '$lib/theme';
+	import { resolve } from 'path';
 
 	const links = [
 		{ href: '/', label: 'Home' },
@@ -15,7 +16,7 @@
 
 <nav class="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-border transition-colors duration-300">
 	<div class="mx-auto flex max-w-2xl items-center justify-between px-6 py-4">
-		<a href="/" class="flex items-center gap-3 hover:opacity-100">
+		<a href={resolve('/blog')} class="flex items-center gap-3 hover:opacity-100">
 			<img src="/memoji.png" alt="Logo" class="h-8 w-8 rounded-full" />
 			<span class="font-display text-lg font-medium tracking-wide">Mukund</span>
 		</a>
@@ -23,7 +24,7 @@
 		<div class="flex items-center gap-6">
 			{#each links as link}
 				<a
-					href={link.href}
+					href={resolve(link.href)}
 					class="sc text-sm transition-opacity duration-200 {isActive(link.href)
 						? 'font-medium opacity-100'
 						: 'opacity-50 hover:opacity-80'}"

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { formatDate } from '$lib/blog';
 	import { onMount } from 'svelte';
 
@@ -117,7 +118,7 @@
 
 			<!-- Header -->
 			<header class="mb-10 animate-fade-up">
-				<a href="/blog" class="sc text-xs text-muted tracking-wider hover:text-fg hover:opacity-100 transition-colors duration-200 mb-6 inline-block">
+				<a href={resolve('/blog')} class="sc text-xs text-muted tracking-wider hover:text-fg hover:opacity-100 transition-colors duration-200 mb-6 inline-block">
 					&larr; Back to blog
 				</a>
 
@@ -159,7 +160,7 @@
 			<!-- Back link -->
 			<hr class="my-14" />
 			<div class="text-center animate-fade-up-delay-3">
-				<a href="/blog" class="sc text-xs text-muted tracking-wider hover:text-fg hover:opacity-100 transition-colors duration-200">
+				<a href={resolve('/blog')} class="sc text-xs text-muted tracking-wider hover:text-fg hover:opacity-100 transition-colors duration-200">
 					&larr; All posts
 				</a>
 			</div>

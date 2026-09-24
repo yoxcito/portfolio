@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/blog';
+	import { resolve } from '$app/paths';
 
 	let { data } = $props();
 </script>
@@ -26,11 +27,11 @@
 		<p class="text-muted text-sm">No posts yet. Check back soon.</p>
 	{:else}
 		<div class="space-y-10 animate-fade-up-delay-1">
-			{#each data.posts as post}
-				<a href="/blog/{post.slug}" class="group block hover:opacity-100">
+			{#each data.posts as post (post.slug)}
+				<a href={resolve(`/blog/${post.slug}`)} class="group block hover:opacity-100">
 					<article class="flex flex-col sm:flex-row gap-5">
 						{#if post.cover}
-							<div class="sm:w-40 sm:h-28 w-full h-48 flex-shrink-0 overflow-hidden rounded">
+							<div class="sm:w-40 sm:h-28 w-full h-48 shrink-0 overflow-hidden rounded">
 								<img
 									src={post.cover}
 									alt={post.title}
@@ -50,7 +51,7 @@
 							<p class="mt-1 text-sm text-muted line-clamp-2">{post.description}</p>
 							{#if post.tags.length > 0}
 								<div class="mt-2 flex gap-2">
-									{#each post.tags as tag}
+									{#each post.tags as tag (tag)}
 										<span class="sc text-[10px] tracking-wider text-muted border border-border px-2 py-0.5 rounded-full">
 											{tag}
 										</span>
