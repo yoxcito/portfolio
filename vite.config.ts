@@ -15,6 +15,13 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			adapter: adapter(),
+			paths: {
+				base: process.argv.includes('dev')
+					? ''
+					: process.env.BASE_PATH
+						? (`/${process.env.BASE_PATH.replace(/^\/+/, '')}` as `/${string}`)
+						: undefined
+			},
 			preprocess: [
 				mdsvex({
 					extensions: ['.svx', '.md'],
