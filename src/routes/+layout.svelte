@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={asset('/memoji.png')} />
+	<link rel="icon" href={asset('/memoji.avif')} />
 </svelte:head>
 
 <Nav />
