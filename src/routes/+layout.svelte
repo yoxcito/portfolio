@@ -1,4 +1,9 @@
+<script module lang="ts">
+	export const prerender = true;
+</script>
+
 <script lang="ts">
+
 	import './layout.css';
 	import Nav from '$lib/components/Nav.svelte';
 
