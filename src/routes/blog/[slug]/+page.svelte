@@ -58,9 +58,9 @@
 					<p class="text-xs font-semibold tracking-widest text-fg uppercase mb-4">Contents</p>
 					<nav class="relative flex flex-col gap-1">
 						<!-- Vertical track bar -->
-						<div class="absolute left-0 top-0 bottom-0 w-[2px] bg-border rounded-full"></div>
+						<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-border rounded-full"></div>
 
-						{#each data.headings as heading}
+						{#each data.headings as heading (heading.id)}
 							{@const isActive = activeId === heading.id}
 							<button
 								onclick={() => scrollToHeading(heading.id)}
@@ -98,8 +98,8 @@
 
 					{#if tocOpen}
 						<nav class="relative mt-3 flex flex-col gap-1 pl-4 animate-fade-up">
-							<div class="absolute left-0 top-0 bottom-0 w-[2px] bg-border rounded-full"></div>
-							{#each data.headings as heading}
+							<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-border rounded-full"></div>
+							{#each data.headings as heading (heading.id)}
 								{@const isActive = activeId === heading.id}
 								<button
 									onclick={() => scrollToHeading(heading.id)}
@@ -132,7 +132,7 @@
 
 				{#if data.tags.length > 0}
 					<div class="mt-4 flex gap-2 flex-wrap">
-						{#each data.tags as tag}
+						{#each data.tags as tag (tag)}
 							<span class="sc text-[10px] tracking-wider text-muted border border-border px-2 py-0.5 rounded-full">
 								{tag}
 							</span>
