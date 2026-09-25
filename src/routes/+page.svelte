@@ -4,13 +4,13 @@
 </svelte:head>
 
 <script>
-	import { asset, resolve } from '$app/paths';
+	import { base, resolve } from '$app/paths';
 </script>
 
 <section class="mx-auto flex min-h-[calc(100vh-5rem)] max-w-2xl flex-col justify-center px-6">
 	<div class="animate-fade-up">
 		<img
-			src={asset('/memoji.avif')}
+			src={`${base}/memoji.avif`}
 			alt="Memoji avatar"
 			class="mb-8 h-20 w-20 rounded-full border border-border"
 		/>

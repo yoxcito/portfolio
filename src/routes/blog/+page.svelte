@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/blog';
-	import { asset, resolve } from '$app/paths';
+	import { base, resolve } from '$app/paths';
 
 	let { data } = $props();
 </script>
@@ -33,7 +33,7 @@
 						{#if post.cover}
 							<div class="sm:w-40 sm:h-28 w-full h-48 shrink-0 overflow-hidden rounded">
 								<img
-									src={asset(post.cover)}
+									src={`${base}${post.cover}`}
 									alt={post.title}
 									class="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
 								/>
